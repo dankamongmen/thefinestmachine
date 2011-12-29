@@ -1,11 +1,13 @@
-all: machines.pdf
+BOOK:=machines
+
+all: $(BOOK).pdf
 	evince $<
 
-machines.pdf: machines.tex
+$(BOOK).pdf: $(BOOK).tex
 	pdflatex $<
 	bibtex $(basename $<)
 	pdflatex $<
 	pdflatex $<
 
 clean:
-	rm -f machines.pdf machines.aux machines.toc machines.log
+	rm -f $(BOOK).pdf $(BOOK).aux $(BOOK).toc $(BOOK).log $(BOOK).bbl $(BOOK).blg
