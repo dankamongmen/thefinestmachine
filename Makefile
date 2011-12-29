@@ -3,6 +3,8 @@ all: machines.pdf
 
 machines.pdf: machines.tex
 	pdflatex $<
+	bibtex $(basename $<)
+	pdflatex $<
 	pdflatex $<
 
 clean:
