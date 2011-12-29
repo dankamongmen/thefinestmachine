@@ -1,9 +1,12 @@
 \documentclass[letterpaper,draft]{memoir}
 \usepackage{framed}
+\usepackage{makeidx}
 \usepackage{fullpage}
 \usepackage[explicit]{titlesec}
 \usepackage[latin,german,greek,english]{babel}
 \usepackage[utf8x]{inputenc}
+
+\makeindex
 
 \makeatletter
 \renewcommand{\@pnumwidth}{1.75em}
@@ -285,10 +288,14 @@ plastico-optical storage. The rotting of bits.}
 
 \addtocontents{toc}{\vspace{.25in}}
 
-{
-\Hide
 \section{AFTERWARD: The Finest Machine.}
+%%\cite{Witt18}
+
 \section{CITATIONS}
-}
+%%\bibliographystyle{plain}
+%%\bibliography{machines}
+
+\section{INDEX}
+\printindex
 
 \end{document}
