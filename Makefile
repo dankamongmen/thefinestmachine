@@ -10,4 +10,4 @@ $(BOOK).pdf: $(BOOK).tex
 	pdflatex $<
 
 clean:
-	rm -f $(BOOK).pdf $(BOOK).aux $(BOOK).toc $(BOOK).log $(BOOK).bbl $(BOOK).blg
+	rm -f $(BOOK).pdf $(BOOK).aux $(BOOK).toc $(BOOK).log $(BOOK).bbl $(BOOK).blg $(BOOK).idx
