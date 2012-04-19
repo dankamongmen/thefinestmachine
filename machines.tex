@@ -1,10 +1,13 @@
-\documentclass[letterpaper,draft]{memoir}
+%\documentclass[letterpaper,draft]{memoir}
+\documentclass[letterpaper]{memoir}
+\usepackage[latin,german,greek,english]{babel}
+\usepackage{graphicx}
 \usepackage{framed}
 \usepackage{makeidx}
 \usepackage{fullpage}
 \usepackage[explicit]{titlesec}
-\usepackage[latin,german,greek,english]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage{eso-pic}
 
 \makeindex
 
@@ -29,6 +32,9 @@
     {\huge\raggedleft \@title\par}%
     \hrulefill\par
     {\LARGE\raggedleft \@author\par}%
+    \vspace{.6in}
+    \hspace{1.2in}
+    \includegraphics[width=5in,height=5in]{background.png}
   \end{center}%
 \end{leftbar}
   \vfill
@@ -53,6 +59,7 @@
 \begin{document}
 \frenchspacing
 \maketitle
+
 
 %\thispagestyle{empty}
 {

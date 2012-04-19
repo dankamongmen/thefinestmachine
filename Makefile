@@ -5,9 +5,15 @@ all: $(BOOK).pdf
 
 $(BOOK).pdf: $(BOOK).tex
 	pdflatex $<
+
+#$(BOOK).pdf: $(BOOK).dvi
+#	dvipdf $<
+
+$(BOOK).dvi: $(BOOK).tex
+	latex $<
 	bibtex $(basename $<)
-	pdflatex $<
-	pdflatex $<
+	latex $<
+	latex $<
 
 clean:
-	rm -f $(BOOK).pdf $(BOOK).aux $(BOOK).toc $(BOOK).log $(BOOK).bbl $(BOOK).blg $(BOOK).idx
+	rm -f $(BOOK).pdf $(BOOK).aux $(BOOK).toc $(BOOK).log $(BOOK).bbl $(BOOK).blg $(BOOK).idx $(BOOK).dvi
