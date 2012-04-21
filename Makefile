@@ -16,4 +16,5 @@ $(BOOK).dvi: $(BOOK).tex
 	latex $<
 
 clean:
-	rm -f $(BOOK).pdf $(BOOK).aux $(BOOK).toc $(BOOK).log $(BOOK).bbl $(BOOK).blg $(BOOK).idx $(BOOK).dvi
+	rm -f $(BOOK).pdf $(BOOK).aux $(BOOK).toc $(BOOK).log $(BOOK).bbl $(BOOK).blg \
+		$(BOOK).idx $(BOOK).dvi $(BOOK).bib

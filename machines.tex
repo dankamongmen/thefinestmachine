@@ -1,7 +1,9 @@
-%\documentclass[letterpaper,draft]{memoir}
-\documentclass[letterpaper]{memoir}
+\documentclass[letterpaper,draft]{memoir}
+% Use [final] to include the graphics despite [draft] above.
+\usepackage[final]{graphicx}
+%\usepackage{pstricks,pst-grad,pst-slpe}
 \usepackage[latin,german,greek,english]{babel}
-\usepackage{graphicx}
+\usepackage[small]{caption}
 \usepackage{framed}
 \usepackage{makeidx}
 \usepackage{fullpage}
@@ -17,9 +19,11 @@
 \makeatother
 
 \ifdraftdoc
-\makeoddfoot{plain}{\tiny \textit{\textbf{DRAFT: \today}}}{\thepage}{\tiny Copyright \copyright\ 2011 Nick Black}
-\makeevenfoot{plain}{\tiny Copyright \copyright\ 2011 Nick Black}{\thepage}{\tiny\textit{\textbf{DRAFT: \today}}}
+\makeoddfoot{plain}{\tiny \textit{\textbf{DRAFT: \today}}}{\thepage}{\tiny Copyright \copyright\ 2012 Nick Black}
+\makeevenfoot{plain}{\tiny Copyright \copyright\ 2012 Nick Black}{\thepage}{\tiny\textit{\textbf{DRAFT: \today}}}
 \fi
+
+\captionsetup{font=scriptsize,labelfont=scriptsize}
 
 \makeatletter
 \def\maketitle{%
@@ -28,13 +32,12 @@
 \begin{leftbar}
   \begin{center}
     \normalfont
-
     {\huge\raggedleft \@title\par}%
     \hrulefill\par
     {\LARGE\raggedleft \@author\par}%
-    \vspace{.6in}
-    \hspace{1.2in}
-    \includegraphics[width=5in,height=5in]{background.png}
+    \begin{center}
+    \includegraphics[width=\textwidth]{background.png}
+    \end{center}
   \end{center}%
 \end{leftbar}
   \vfill
@@ -45,7 +48,7 @@
 \author{nick black}
 \title{\emph{\textbf{the finest machine}}\\
 \normalsize the science and the joy of computing}
-\date{2011}
+\date{2012}
 
 \newcommand*\Hide{%
 \titleformat{\section}
@@ -303,5 +306,13 @@ plastico-optical storage. The rotting of bits.}
 \addcontentsline{toc}{chapter}{Index}
 \chapter*{Index}
 \printindex
+
+\addtocontents{toc}{\vspace{1in}
+	\protect \begin{figure}[htb]
+		\protect \centering
+\protect \includegraphics[width=4in,keepaspectratio]{theoryofeverything.jpg}
+\protect \caption{\emph{``What Goes on at the Top?''} Max Tegmark, 2001. Used with permission.}
+\protect \end{figure}
+}
 
 \end{document}
