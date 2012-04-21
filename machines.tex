@@ -1,6 +1,7 @@
 \documentclass[letterpaper,draft]{memoir}
 % Use [final] to include the graphics despite [draft] above.
 \usepackage[final]{graphicx}
+\usepackage{gradientframe}
 %\usepackage{pstricks,pst-grad,pst-slpe}
 \usepackage[latin,german,greek,english]{babel}
 \usepackage[small]{caption}
@@ -36,7 +37,7 @@
     \hrulefill\par
     {\LARGE\raggedleft \@author\par}%
     \begin{center}
-    \includegraphics[width=\textwidth]{background.png}
+	    \gradientframe{\includegraphics[width=6in]{background.png}}
     \end{center}
   \end{center}%
 \end{leftbar}
@@ -308,9 +309,9 @@ plastico-optical storage. The rotting of bits.}
 \printindex
 
 \addtocontents{toc}{\vspace{1in}
-	\protect \begin{figure}[htb]
-		\protect \centering
-\protect \includegraphics[width=4in,keepaspectratio]{theoryofeverything.jpg}
+\protect \begin{figure}[htb]
+\protect \centering
+\protect \gradientframe{\protect \includegraphics[width=4in,keepaspectratio]{theoryofeverything.jpg}}
 \protect \caption{\emph{``What Goes on at the Top?''} Max Tegmark, 2001. Used with permission.}
 \protect \end{figure}
 }
