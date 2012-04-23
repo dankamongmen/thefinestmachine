@@ -23,8 +23,8 @@
 \makeatother
 
 \ifdraftdoc
-\makeoddfoot{plain}{\tiny \textit{\textbf{\LaTeX\ draft: \today}}}{\thepage}{\tiny Copyright \copyright\ 2012 Nick Black}
-\makeevenfoot{plain}{\tiny Copyright \copyright\ 2012 Nick Black}{\thepage}{\tiny\textit{\textbf{\LaTeX\ draft: \today}}}
+\makeoddfoot{plain}{\textbf{\tiny\LaTeX\ draft: \today}}{\normalsize \textcircled{\scriptsize \thepage}}{\tiny Copyright \copyright\ 2012 Nick Black}
+\makeevenfoot{plain}{\tiny Copyright \copyright\ 2012 Nick Black}{\normalsize \textcircled{\scriptsize \thepage}}{\textbf{\tiny \LaTeX\ draft: \today}}
 \fi
 
 \captionsetup{font=scriptsize,labelfont=scriptsize}
@@ -83,7 +83,14 @@ Martin: thanks for everything. You made possible this work of tightly-controlled
 audacity. \textit{Per ardua ad astra}.\\
 
 \raggedleft\footnotesize{--Atlanta, 2011}
+
+\vspace{6in}
+
+\center \scriptsize{\textbf{This document was prepared on Debian Linux using \LaTeX, the GIMP, ImageMagick, GNU Make, and Vim.}}
+\center \tiny{Debian is a registered trademark of Software in the Public Interest, Inc.\\ImageMagick is a registered trademark of ImageMagick Studio LLC.}
 \clearpage
+
+\raggedleft\footnotesize
 
 %\thispagestyle{empty}
 \begin{quote}I made a discovery today. I found a computer\ldots And then it happened\ldots a door
