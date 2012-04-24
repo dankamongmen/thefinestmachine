@@ -1,3 +1,6 @@
+.DELETE_ON_ERROR:
+.PHONY: all lint clean
+
 BOOK:=machines
 
 all: $(BOOK).pdf
@@ -5,6 +8,9 @@ all: $(BOOK).pdf
 
 $(BOOK).pdf: $(BOOK).tex
 	pdflatex $<
+
+lint: $(BOOK).tex
+	chktex $<
 
 #$(BOOK).pdf: $(BOOK).dvi
 #	dvipdf $<
